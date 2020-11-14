@@ -7,6 +7,12 @@
 body {
   color: #30526A;
   background-color: #FFFFFF;
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: normal;
+}
+
+strong {
+  font-weight: bold;  /* Or 700 - se non mi serve posso eliminarlo*/
 }
 
 .sezione-about {
@@ -30,7 +36,7 @@ body {
   margin: auto; /*Horizontal*/
 }
 
-/*  inserire font maven */
+/*  inserire font maven - locally hosted web fonts*/
 /*  inserire mobile friendly a 800px */
 /*  menu espando o a righe? di sicuro con il */
 /*  inserire gerarchia font, usare come spunto backlinko */
