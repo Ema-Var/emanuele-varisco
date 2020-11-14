@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #30526A;
+  background-color: #FFFFFF;
+}
+
+.sezione-about {
+  color: #FFFFFF;
+  background-color: #5EC9CC;
+}
+
+.sezione-progetti {
+  color: #FFFFFF;
+  background-color: #F6836B;
+}
+
+.sezione-contatti {
+  background-color: #F9D291;
+}
+
+.page750px {
+/*  text-align: center; */
+  width: 750px; /*da valutare se anche per l'header e/o footer... o fare a tutta ampiezza
+  nel caso coc */
+  margin: auto; /*Horizontal*/
+}
+
+/*  inserire font maven */
+/*  inserire mobile friendly a 800px */
+/*  menu espando o a righe? di sicuro con il */
+/*  inserire gerarchia font, usare come spunto backlinko */
