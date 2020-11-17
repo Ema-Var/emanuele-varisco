@@ -9,8 +9,8 @@ body {
   background-color: #FFFFFF;
   font-family: 'Maven Pro', sans-serif;
   font-weight: normal;
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 16px;
+  line-height: 26px;
 
 }
 
@@ -21,6 +21,7 @@ body {
 
 .sezione { /* Verificare il funzionamento*/
   width: 100%;
+  padding: 0.5em 1em;
 /*  display: flex;  per me bisogna saltare questo livello ed andare all'eventuale contenitore di immagini successivo a titolo e paragrafo*/
 }
 
@@ -35,8 +36,8 @@ h1 {
 }
 
 h2 {
-  font-size: 36px;
-  line-height: 46px;
+  font-size: 32px;
+  line-height: 42px;
   font-weight: normal;
 }
 
@@ -54,17 +55,73 @@ h2 {
   background-color: #F9D291;
 }
 
+nav ul {
+  background-color: #FFFFFF;
+  list-style-type:none;
+  display: flex;
+  flex-direction: column;
+}
+
+nav ul li a{
+  color: #30526A;
+  display: block;
+  padding: 0em 1em;
+  text-decoration: none;
+  text-align: center;
+}
+
+nav ul li a:hover{
+  color: #F6836B;
+}
 
 /* Desktop Styles */
 @media only screen and (min-width: 800px) {
+
+  body {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  h1 {
+    font-size: 27px;
+    line-height: 37px;
+  }
+
+  h2 {
+    font-size: 36px;
+    line-height: 46px;
+    font-weight: normal;
+  }
+
   .page750px {
     width: 750px; /*da valutare se anche per l'header e/o footer... o fare a tutta ampiezza
     nel caso creare una nuova classe specifica per gli elementi */
     margin: auto; /*Horizontal*/
   }
 
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  nav ul li {
+    flex:1;
+    text-align: center;
+  }
+
+  nav ul li a:hover{
+  }
 
 }
+
+
+
 
 
 
