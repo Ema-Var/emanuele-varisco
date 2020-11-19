@@ -11,8 +11,9 @@ body {
   font-weight: normal;
   font-size: 16px;
   line-height: 26px;
-
 }
+
+/* Bloccare l'header, definire un'altezza ed impostare il torna su... */
 
 .pagina { /* Verificare il funzionamento*/
   display: flex;
@@ -21,7 +22,7 @@ body {
 
 .sezione { /* Verificare il funzionamento*/
   width: 100%;
-  padding: 0.5em 1em;
+  padding: 0.5em 1em; /* Rivedere cosa significa em */ 
 /*  display: flex;  per me bisogna saltare questo livello ed andare all'eventuale contenitore di immagini successivo a titolo e paragrafo*/
 }
 
@@ -29,16 +30,23 @@ strong {
   font-weight: bold;  /* Or 700 - se non mi serve posso eliminarlo*/
 }
 
+
 h1 {
-  font-size: 24px;
-  line-height: 34px;
+  font-size: 32px;
+  line-height: 42px;
   font-weight: bold;
+  text-align: center;
+}
+
+.intro {
+  text-align: center;
 }
 
 h2 {
-  font-size: 32px;
-  line-height: 42px;
-  font-weight: normal;
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: bold;
+  text-align: center;
 }
 
 .sezione-about {
@@ -74,6 +82,35 @@ nav ul li a:hover{
   color: #F6836B;
 }
 
+footer {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+footer div p a{
+  text-decoration: none;
+  font-weight: bold;
+  color: #F6836B;
+}
+
+article div div a{
+  text-decoration: none;
+  color: #30526A;
+}
+
+.icon {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+/* Tablet stiles
+@media only screen and (min-width: 800px) {
+Font da mobile
+Menù ibrido
+Immagine desktop usare i pixel minimi del desktop come larghezza
+*/
+
 /* Desktop Styles */
 @media only screen and (min-width: 800px) {
 
@@ -83,14 +120,13 @@ nav ul li a:hover{
   }
 
   h1 {
-    font-size: 27px;
-    line-height: 37px;
+    font-size: 36px;
+    line-height: 46px;
   }
 
   h2 {
-    font-size: 36px;
-    line-height: 46px;
-    font-weight: normal;
+    font-size: 27px;
+    line-height: 37px;
   }
 
   .page750px {
@@ -115,17 +151,5 @@ nav ul li a:hover{
     text-align: center;
   }
 
-  nav ul li a:hover{
-  }
 
 }
-
-
-
-
-
-
-/*  inserire font maven - locally hosted web fonts*/
-/*  inserire mobile friendly a 800px */
-/*  menu espando o a righe? di sicuro con il */
-/*  inserire gerarchia font, usare come spunto backlinko */
