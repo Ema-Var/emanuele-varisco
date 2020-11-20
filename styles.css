@@ -22,7 +22,7 @@ body {
 
 .sezione { /* Verificare il funzionamento*/
   width: 100%;
-  padding: 0.5em 1em; /* Rivedere cosa significa em */ 
+  padding: 0.5em 1em; /* Rivedere cosa significa em */
 /*  display: flex;  per me bisogna saltare questo livello ed andare all'eventuale contenitore di immagini successivo a titolo e paragrafo*/
 }
 
@@ -47,6 +47,14 @@ h2 {
   line-height: 34px;
   font-weight: bold;
   text-align: center;
+}
+
+.img-flex {
+  max-width: 100%
+}
+
+.logo-flex {
+  max-width: 40px
 }
 
 .sezione-about {
