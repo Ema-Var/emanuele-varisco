@@ -90,6 +90,42 @@ nav ul li a:hover{
   color: #F6836B;
 }
 
+.elenco-progetti{
+  list-style-type:none;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.elenco-progetti li{
+  flex: 1 0 100%;
+  height: 240px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.elenco-skill {
+list-style: none;
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+justify-content: flex-start;
+align-items: stretch;
+
+}
+
+.elenco-skill li{
+  max-width: 50%;
+  height: auto;
+  padding:20px;
+}
+
+.elenco-skill li img{
+  width: 100%;
+}
+
+
 footer {
   font-size: 12px;
   line-height: 18px;
@@ -112,12 +148,24 @@ article div div a{
   flex-direction: row;
 }
 
-/* Tablet stiles
-@media only screen and (min-width: 800px) {
-Font da mobile
-Menù ibrido
-Immagine desktop usare i pixel minimi del desktop come larghezza
-*/
+/* Tablet Styles */
+@media only screen and (min-width: 400px) and (max-width: 800px) {
+    .elenco-progetti li{
+      max-width: 50%;
+      height: 240px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+
+  .elenco-skill li{
+    max-width: 33%;
+    height: auto;
+    padding:20px;
+  }
+
+}
 
 /* Desktop Styles */
 @media only screen and (min-width: 800px) {
@@ -159,5 +207,18 @@ Immagine desktop usare i pixel minimi del desktop come larghezza
     text-align: center;
   }
 
+  .elenco-progetti li{
+    max-width: 50%;
+    height: 360px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .elenco-skill li{
+    max-width: 20%;
+    height: auto;
+    padding:20px;
+  }
 
 }
