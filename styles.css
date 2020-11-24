@@ -64,11 +64,16 @@ h2 {
 
 .sezione-progetti {
   color: #FFFFFF;
-  background-color: #F6836B;
+  background-color: #30526A;
+  padding: 0px 0px;
+}
+
+.sezione-progetti div{
+  padding: 0.5em 1em;
 }
 
 .sezione-contatti {
-  background-color: #F9D291;
+  background-color: #F6836B;
 }
 
 nav ul {
@@ -95,14 +100,33 @@ nav ul li a:hover{
   display: flex;
   width: 100%;
   flex-wrap: wrap;
+
 }
 
 .elenco-progetti li{
   flex: 1 0 100%;
-  height: 240px;
+  height: 180px;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  align-items: flex-end;
+}
+
+.elenco-progetti li span{
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, transparent 0%, #15232D 100%);
+}
+
+.elenco-progetti li span p{
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 18px;
+  color:#FFFFFF;
+  padding: 15px 15px;
 }
 
 .elenco-skill {
@@ -152,7 +176,7 @@ article div div a{
 @media only screen and (min-width: 400px) and (max-width: 800px) {
     .elenco-progetti li{
       max-width: 50%;
-      height: 240px;
+      height: 180px;
       background-position: center center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -208,8 +232,8 @@ article div div a{
   }
 
   .elenco-progetti li{
-    max-width: 50%;
-    height: 360px;
+    max-width: 33.3333%;
+    height: 240px;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
