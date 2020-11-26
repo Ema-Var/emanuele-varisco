@@ -21,9 +21,7 @@ body {
 }
 
 header{
-  position: fixed;
-
-  height: 50px;
+  height: 60px;
   background-color: #FFFFFF;
 }
 
@@ -33,6 +31,21 @@ header{
 /*  display: flex;  per me bisogna saltare questo livello ed andare all'eventuale contenitore di immagini successivo a titolo e paragrafo*/
 }
 
+.menu nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.logo-burger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 strong {
   font-weight: bold;  /* Or 700 - se non mi serve posso eliminarlo*/
 }
@@ -65,9 +78,11 @@ h2 {
 }
 
 .sezione-about {
-  margin-top: 50px;
+  padding: 3em 1em;
+/* se la regola è uniforme, la vado ad applicare al padre*/
+
   color: #FFFFFF;
-  background-color: #5EC9CC;
+  background-color: #30526A;
 }
 
 .sezione-progetti {
@@ -81,22 +96,34 @@ h2 {
 }
 
 .sezione-contatti {
-  background-color: #F6836B;
+  color: #FFFFFF;
+  background-color: #30526A;
+}
+
+.icon i.fas,
+.icon i.fab{
+  color: #FFFFFF;
 }
 
 nav ul {
+  height:200px;
   background-color: #FFFFFF;
   list-style-type:none;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  padding: 0.75em 0em;
+}
+
+nav ul li{
+  display: inline;
+  text-align: center;
 }
 
 nav ul li a{
   color: #30526A;
-  display: block;
   padding: 0em 1em;
   text-decoration: none;
-  text-align: center;
 }
 
 nav ul li a:hover{
@@ -156,7 +183,6 @@ align-items: center;
 .elenco-skill li img{
   width: 100%;
 }
-
 
 footer {
   font-size: 12px;
@@ -221,22 +247,6 @@ article div div a{
     width: 750px; /*da valutare se anche per l'header e/o footer... o fare a tutta ampiezza
     nel caso creare una nuova classe specifica per gli elementi */
     margin: auto; /*Horizontal*/
-  }
-
-  .menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  nav ul {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  nav ul li {
-    flex:1;
-    text-align: center;
   }
 
   .elenco-progetti li{
