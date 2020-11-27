@@ -4,31 +4,58 @@
   box-sizing: border-box;
 }
 
+/* regola per usare la convenzione rem per i font, equivale a 10px */
+html {
+  font-size: 62.5%;
+}
+
 body {
   color: #30526A;
   background-color: #FFFFFF;
   font-family: 'Maven Pro', sans-serif;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 26px;
+  font-size: 1.6rem;
+  line-height: 1.5;
 }
 
-/* Bloccare l'header, definire un'altezza ed impostare il torna su... */
+strong {
+  font-weight: bold;  /* Or 700 - se non mi serve posso eliminarlo*/
+}
 
-.pagina { /* Verificare il funzionamento*/
+h1 {
+  font-size: 3.2rem;
+  text-align: center;
+  font-weight: bold;
+  margin: 3.2rem 0;
+}
+
+h2 {
+  font-size: 2.4rem;
+  text-align: center;
+  font-weight: bold;
+  margin: 2.4rem 0;
+}
+
+p {
+  margin: 1.6rem 0;
+}
+
+.sezione-about p:first-of-type{
+  margin: 3.2rem 0 1.6rem;
+}
+
+.pagina { /* Imposta gli elementi principali della pagina come flexbox*/
   display: flex;
   flex-wrap: wrap;
 }
 
 header{
-  height: 60px;
   background-color: #FFFFFF;
 }
 
-.sezione { /* Verificare il funzionamento*/
+.sezione { /* adatta la dimensione del box allo schermo*/
   width: 100%;
-  padding: 0.5em 1em; /* Rivedere cosa significa em */
-/*  display: flex;  per me bisogna saltare questo livello ed andare all'eventuale contenitore di immagini successivo a titolo e paragrafo*/
+  padding: 0rem 1.6rem;
 }
 
 .menu nav {
@@ -45,32 +72,16 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-strong {
-  font-weight: bold;  /* Or 700 - se non mi serve posso eliminarlo*/
-}
-
-
-h1 {
-  font-size: 32px;
-  line-height: 42px;
-  font-weight: bold;
-  text-align: center;
+  margin: 1.6rem 0;
 }
 
 .intro {
   text-align: center;
 }
 
-h2 {
-  font-size: 24px;
-  line-height: 34px;
-  font-weight: bold;
-  text-align: center;
-}
-
 .img-flex {
-  max-width: 100%
+  max-width: 100%;
+  margin: 1.6rem 0;
 }
 
 .logo-flex {
@@ -78,9 +89,6 @@ h2 {
 }
 
 .sezione-about {
-  padding: 3em 1em;
-/* se la regola è uniforme, la vado ad applicare al padre*/
-
   color: #FFFFFF;
   background-color: #30526A;
 }
@@ -88,11 +96,11 @@ h2 {
 .sezione-progetti {
   color: #FFFFFF;
   background-color: #30526A;
-  padding: 0px 0px;
+  padding: 0rem 0rem;
 }
 
-.sezione-progetti div{
-  padding: 0.5em 1em;
+.sezione-progetti div {
+  padding: 0rem 1.6rem;
 }
 
 .sezione-contatti {
@@ -103,6 +111,7 @@ h2 {
 .icon i.fas,
 .icon i.fab{
   color: #FFFFFF;
+  margin: 0 0 2.4rem;
 }
 
 nav ul {
@@ -135,7 +144,6 @@ nav ul li a:hover{
   display: flex;
   width: 100%;
   flex-wrap: wrap;
-
 }
 
 .elenco-progetti li{
@@ -158,8 +166,6 @@ nav ul li a:hover{
 
 .elenco-progetti li span p{
   font-weight: bold;
-  font-size: 12px;
-  line-height: 18px;
   color:#FFFFFF;
   padding: 15px 15px;
 }
@@ -171,7 +177,6 @@ flex-wrap: wrap;
 flex-direction: row;
 justify-content: flex-start;
 align-items: center;
-
 }
 
 .elenco-skill li{
@@ -185,8 +190,12 @@ align-items: center;
 }
 
 footer {
-  font-size: 12px;
-  line-height: 18px;
+  font-size: 1.2rem;
+  margin: 1.2rem 0;
+}
+
+footer div p {
+  margin: 0 0;
 }
 
 footer div p a{
@@ -208,14 +217,26 @@ article div div a{
 
 /* Tablet Styles */
 @media only screen and (min-width: 400px) and (max-width: 800px) {
-    .elenco-progetti li{
-      max-width: 50%;
-      height: 180px;
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
 
+  body {
+    font-size: 1.8rem;
+  }
+
+  h1 {
+    font-size: 3.6rem;
+  }
+
+  h2 {
+    font-size: 2.7rem;
+  }
+
+  .elenco-progetti li{
+    max-width: 50%;
+    height: 240px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
   .elenco-skill li{
     max-width: 33%;
@@ -229,29 +250,33 @@ article div div a{
 @media only screen and (min-width: 800px) {
 
   body {
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 2rem;
   }
 
   h1 {
-    font-size: 36px;
-    line-height: 46px;
+    font-size: 4rem;
   }
 
   h2 {
-    font-size: 27px;
-    line-height: 37px;
+    font-size: 3rem;
   }
 
   .page750px {
-    width: 750px; /*da valutare se anche per l'header e/o footer... o fare a tutta ampiezza
-    nel caso creare una nuova classe specifica per gli elementi */
+    width: 750px;
     margin: auto; /*Horizontal*/
+  }
+
+  .sezione-progetti div {
+    padding: 0rem 0rem;
+  }
+
+  .sezione-progetti div .page750px{
+    padding: 0rem 1.6rem;
   }
 
   .elenco-progetti li{
     max-width: 33.3333%;
-    height: 240px;
+    height: 360px;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;

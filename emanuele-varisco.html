@@ -26,10 +26,10 @@
     <script>
       function myFunction() {
         var x = document.getElementById("myDIV");
-        if (x.style.display === "none") {
-          x.style.display = "block";
-        } else {
+        if (x.style.display === "block") {
           x.style.display = "none";
+        } else {
+          x.style.display = "block";
         }
       }
     </script>
@@ -37,7 +37,7 @@
   </head>
   <body>
 
-    <div class='pagina'>           <!-- Serve a gestire il layout mobile a tutta ampiezza!-->
+    <div class='pagina'>
 
       <header class='sezione'>
         <div class='page750px menu'>
@@ -64,9 +64,8 @@
         <div class='page750px'>
           <p class="intro">Ciao! Sono...</p>
           <h1>Emanuele Varisco</h1>
-          <br>
           <p> Sono un digital marketer specializzato in SEO, data analytics,
-              content marketing ed affascinato dal web developmment...</p>
+              content marketing ed affascinato dal web development...</p>
           <p> Ma ho anche lavorato per 10 anni nel settore bancario cercando
               ogni giorno di migliorare il modo di lavorare delle persone ed
                in generale il loro rapporto con la tecnologia </p>
@@ -76,13 +75,10 @@
       <article class='sezione'>
         <div class='page750px'>
           <h2><a name="metodo">Metodo</a></h2>
-          <br>
           <p>La <strong>migliore tattica digitale</strong> per concretizzare la <strong>strategia</strong> e raggiungere
              l'<strong>obiettivo di business</strong>, identificando i <strong>KPI</strong>s per misurane l'efficacia</p>
-          <br>
           <img class='img-flex' src='images/marketing-strategico-e-operativo-large.png'/>
-          <br>
-          <br>
+
         </div>
       </article>
 
@@ -95,7 +91,7 @@
 
           <ul class='elenco-progetti'>
             <li style="background-image: url('images/seo-copywriting.png')";><span><p>Blog post ottimizzato SEO</p></span></li>
-            <li style="background-image: url('images/seo-audit.png')";><span><p>SEO Audit:opportunità per migliorare il ranking Google</p></span></li>
+            <li style="background-image: url('images/seo-audit.png')";><span><p>SEO Audit: opportunità per migliorare il ranking Google</p></span></li>
             <li style="background-image: url('images/seo-website-seofriendly.png')";><span><p>Progettazione sito SEO friendly</p></span></li>
             <li style="background-image: url('images/google-analytics.png')";><span><p>Google Analytics: measurement plan e report KPI</p></span></li>
             <li style="background-image: url('images/google-data-studio.png')";><span><p>Google Data Studio: dashboard sulla diffusione del Covid19</p></span></li>
@@ -108,7 +104,6 @@
       <article class='sezione'>
         <div class='page750px'>
           <h2><a name="skill">Skill</a></h2>
-          <br>
           <ul class='elenco-skill'>
            <li> <img src='images/screamingfrog-logo.png'/></li>
            <li> <img src='images/ubersuggest-logo.png'/></li>
@@ -126,8 +121,6 @@
       <article class='sezione sezione-contatti'>
         <div class='page750px'>
           <h2><a name="contatti">Contatti</a></h2>
-          <br>
-          <br>
           <div class='icon'>
             <a href="mailto:e.varisco84@gmail.com" target="_blank"><i class="fas fa-envelope-square fa-3x"></i></a>
             <a href="https://www.linkedin.com/in/emanuele-varisco/" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
