@@ -1,12 +1,13 @@
+/* reset stile di default del browser*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* regola per usare la convenzione rem per i font, equivale a 10px */
+/* impostazioni generali */
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; /* valore di riferimento per i rem */
 }
 
 body {
@@ -18,14 +19,10 @@ body {
   line-height: 1.5;
 }
 
-strong {
-  font-weight: bold;  /* Or 700 - se non mi serve posso eliminarlo*/
-}
-
 h1 {
   font-size: 3.2rem;
   text-align: center;
-  font-weight: bold;
+  font-weight: normal;
   margin: 3.2rem 0;
 }
 
@@ -40,59 +37,77 @@ p {
   margin: 1.6rem 0;
 }
 
-.sezione-about p:first-of-type{
-  margin: 3.2rem 0 1.6rem;
+strong {
+  font-weight: bold;
 }
 
-.pagina { /* Imposta gli elementi principali della pagina come flexbox*/
+.pagina { /* imposta gli elementi principali della pagina come flexbox*/
   display: flex;
   flex-wrap: wrap;
 }
 
-header{
-  background-color: #FFFFFF;
-}
-
-.sezione { /* adatta la dimensione del box allo schermo*/
+.sezione { /* adatta la dimensione del box allo schermo ed assieme alla class "fixes-width-layout"
+ consente di gestire il layout fisso per desktop */
   width: 100%;
   padding: 0rem 1.6rem;
 }
 
-.menu nav {
-  display: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  margin-right: auto;
-  margin-left: auto;
+/* sezione "Header" */
+header img {
+  max-width: 40px
 }
 
-.logo-burger {
+.logo-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 1.6rem 0;
 }
 
-.intro {
+nav { /* gestione menu in modalità "esplosa"*/
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #FFFFFF;
+}
+
+nav ul {
+  list-style-type:none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+nav li {
   text-align: center;
+  line-height: 1.7;
 }
 
-.img-flex {
-  max-width: 100%;
-  margin: 1.6rem 0;
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #30526A;
 }
 
-.logo-flex {
-  max-width: 40px
+nav a:hover {
+  color: #F6836B;
 }
 
+/* sezione "About" */
 .sezione-about {
   color: #FFFFFF;
   background-color: #30526A;
 }
 
+/* sezione "Metodo" */
+.img-flex {
+  max-width: 100%;
+  margin: 1.6rem 0;
+}
+
+/* sezione "Progetti" */
 .sezione-progetti {
   color: #FFFFFF;
   background-color: #30526A;
@@ -103,50 +118,14 @@ header{
   padding: 0rem 1.6rem;
 }
 
-.sezione-contatti {
-  color: #FFFFFF;
-  background-color: #30526A;
-}
-
-.icon i.fas,
-.icon i.fab{
-  color: #FFFFFF;
-  margin: 0 0 2.4rem;
-}
-
-nav ul {
-  height:200px;
-  background-color: #FFFFFF;
-  list-style-type:none;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 0.75em 0em;
-}
-
-nav ul li{
-  display: inline;
-  text-align: center;
-}
-
-nav ul li a{
-  color: #30526A;
-  padding: 0em 1em;
-  text-decoration: none;
-}
-
-nav ul li a:hover{
-  color: #F6836B;
-}
-
-.elenco-progetti{
+.elenco-progetti {
   list-style-type:none;
   display: flex;
   width: 100%;
   flex-wrap: wrap;
 }
 
-.elenco-progetti li{
+.elenco-progetti li {
   flex: 1 0 100%;
   height: 180px;
   background-position: center center;
@@ -156,7 +135,7 @@ nav ul li a:hover{
   align-items: flex-end;
 }
 
-.elenco-progetti li span{
+.elenco-progetti span {
   display: flex;
   align-items: flex-end;
   height: 100%;
@@ -164,12 +143,18 @@ nav ul li a:hover{
   background: linear-gradient(to bottom, transparent 0%, #15232D 100%);
 }
 
-.elenco-progetti li span p{
-  font-weight: bold;
+.elenco-progetti a {
+  text-decoration: none;
   color:#FFFFFF;
+  font-weight: bold;
   padding: 15px 15px;
 }
 
+.elenco-progetti a:hover {
+  color: #F6836B;
+}
+
+/* sezione "Skill" */
 .elenco-skill {
 list-style: none;
 display: flex;
@@ -179,34 +164,20 @@ justify-content: flex-start;
 align-items: center;
 }
 
-.elenco-skill li{
+.elenco-skill li {
   max-width: 50%;
   height: auto;
   padding:20px;
 }
 
-.elenco-skill li img{
+.elenco-skill img {
   width: 100%;
 }
 
-footer {
-  font-size: 1.2rem;
-  margin: 1.2rem 0;
-}
-
-footer div p {
-  margin: 0 0;
-}
-
-footer div p a{
-  text-decoration: none;
-  font-weight: bold;
-  color: #F6836B;
-}
-
-article div div a{
-  text-decoration: none;
-  color: #30526A;
+/* sezione "Contatti" */
+.sezione-contatti {
+  color: #FFFFFF;
+  background-color: #30526A;
 }
 
 .icon {
@@ -215,9 +186,44 @@ article div div a{
   flex-direction: row;
 }
 
-/* Tablet Styles */
+.icon a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.icon a:hover {
+  color: #F6836B;
+}
+
+.icon i.fas,
+.icon i.fab {
+  margin: 0 0 2.4rem;
+}
+
+/* sezione "Footer" */
+footer {
+  font-size: 1.2rem;
+  margin: 1.2rem 0;
+}
+
+footer p {
+  margin: 0 0;
+}
+
+footer a{
+  text-decoration: none;
+  font-weight: bold;
+  color: ##30526A;
+}
+
+footer a:hover{
+  color: #F6836B;
+}
+
+/* impostazioni specifiche per tablet */
 @media only screen and (min-width: 400px) and (max-width: 800px) {
 
+/* impostazioni generali */
   body {
     font-size: 1.8rem;
   }
@@ -230,6 +236,7 @@ article div div a{
     font-size: 2.7rem;
   }
 
+/* impostazioni specifiche per le sezioni */
   .elenco-progetti li{
     max-width: 50%;
     height: 240px;
@@ -243,12 +250,12 @@ article div div a{
     height: auto;
     padding:20px;
   }
-
 }
 
-/* Desktop Styles */
+/* impostazioni specifiche per desktop */
 @media only screen and (min-width: 800px) {
 
+/* impostazioni generali */
   body {
     font-size: 2rem;
   }
@@ -261,16 +268,17 @@ article div div a{
     font-size: 3rem;
   }
 
-  .page750px {
+  .fixes-width-layout {
     width: 750px;
     margin: auto; /*Horizontal*/
   }
 
+/* impostazioni specifiche per le sezioni */
   .sezione-progetti div {
     padding: 0rem 0rem;
   }
 
-  .sezione-progetti div .page750px{
+  .sezione-progetti div .fixes-width-layout{
     padding: 0rem 1.6rem;
   }
 
