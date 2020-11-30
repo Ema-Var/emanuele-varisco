@@ -7,7 +7,7 @@
 
 /* impostazioni generali */
 html {
-  font-size: 62.5%; /* valore di riferimento per i rem */
+  font-size: 62.5%; /* valore di riferimento per i "rem" */
 }
 
 body {
@@ -47,14 +47,14 @@ strong {
 }
 
 .sezione { /* adatta la dimensione del box allo schermo ed assieme alla class "fixes-width-layout"
- consente di gestire il layout fisso per desktop */
+ consente di gestire il "layout fisso" per desktop */
   width: 100%;
   padding: 0rem 1.6rem;
 }
 
 /* sezione "Header" */
 header img {
-  max-width: 40px
+  width: 5rem;
 }
 
 .logo-menu {
@@ -118,6 +118,16 @@ nav a:hover {
   padding: 0rem 1.6rem;
 }
 
+.sezione-progetti p a {
+  text-decoration: none;
+  color:#FFFFFF;
+  font-weight: bold;
+}
+
+.sezione-progetti p a:hover {
+  color: #F6836B;
+}
+
 .elenco-progetti {
   list-style-type:none;
   display: flex;
@@ -154,8 +164,8 @@ nav a:hover {
   color: #F6836B;
 }
 
-/* sezione "Skill" */
-.elenco-skill {
+/* sezione "Strumenti" */
+.elenco-strumenti {
 list-style: none;
 display: flex;
 flex-wrap: wrap;
@@ -164,13 +174,13 @@ justify-content: flex-start;
 align-items: center;
 }
 
-.elenco-skill li {
+.elenco-strumenti li {
   max-width: 50%;
   height: auto;
   padding:20px;
 }
 
-.elenco-skill img {
+.elenco-strumenti img {
   width: 100%;
 }
 
@@ -178,6 +188,11 @@ align-items: center;
 .sezione-contatti {
   color: #FFFFFF;
   background-color: #30526A;
+}
+
+.cta {
+  text-align: center;
+  margin: 2.4rem 0 1.6rem;
 }
 
 .icon {
@@ -197,7 +212,7 @@ align-items: center;
 
 .icon i.fas,
 .icon i.fab {
-  margin: 0 0 2.4rem;
+  margin: 2.4rem 0 3.6rem;
 }
 
 /* sezione "Footer" */
@@ -245,7 +260,7 @@ footer a:hover{
     background-size: cover;
   }
 
-  .elenco-skill li{
+  .elenco-strumenti li{
     max-width: 33%;
     height: auto;
     padding:20px;
@@ -270,7 +285,7 @@ footer a:hover{
 
   .fixes-width-layout {
     width: 750px;
-    margin: auto; /*Horizontal*/
+    margin: auto; /* permette di centrare il contenuto */
   }
 
 /* impostazioni specifiche per le sezioni */
@@ -290,7 +305,7 @@ footer a:hover{
     background-size: cover;
   }
 
-  .elenco-skill li{
+  .elenco-strumenti li{
     max-width: 20%;
     height: auto;
     padding:20px;
