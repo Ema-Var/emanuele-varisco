@@ -228,11 +228,18 @@ footer p {
 footer a{
   text-decoration: none;
   font-weight: bold;
+}
+
+footer a:link{
   color: #30526A;
 }
 
 footer a:hover{
   color: #F6836B;
+}
+
+footer a:visited{
+  color: #30526A;
 }
 
 /* impostazioni specifiche per tablet */
