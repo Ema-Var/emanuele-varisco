@@ -234,12 +234,12 @@ footer a:link{
   color: #30526A;
 }
 
-footer a:hover{
-  color: #F6836B;
-}
-
 footer a:visited{
   color: #30526A;
+}
+
+footer a:hover{
+  color: #F6836B;
 }
 
 /* impostazioni specifiche per tablet */
