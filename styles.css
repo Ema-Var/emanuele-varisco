@@ -228,7 +228,7 @@ footer p {
 footer a{
   text-decoration: none;
   font-weight: bold;
-  color: ##30526A;
+  color: #30526A;
 }
 
 footer a:hover{
@@ -285,7 +285,7 @@ footer a:hover{
 
   .fixes-width-layout {
     width: 750px;
-    margin: auto; /* permette di centrare il contenuto */
+    margin: auto; /* permette di centrare il contenuto x\*/
   }
 
 /* impostazioni specifiche per le sezioni */
